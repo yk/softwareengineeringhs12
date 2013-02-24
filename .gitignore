@@ -1,0 +1,10 @@
+bin
+.classpath
+.externalToolBuilders
+*.swp
+.project
+.settings
+.svn
+dist/data-repository
+dist/data-repository.jar
+dist/dist.zip

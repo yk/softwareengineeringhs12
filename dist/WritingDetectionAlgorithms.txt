@@ -1,0 +1,1 @@
+to write a detection algorithm by yourself, just extend ICompletenessDetection and put your class into a jar called data-repository-detection.jar and put that jar beside data-repository.jar.

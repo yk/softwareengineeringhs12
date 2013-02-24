@@ -1,0 +1,14 @@
+data-repository version 1.0
+usage:	data-repository	add [-n name] [-d description] [-m] REPOSITORY DATASET
+			export REPOSITORY DATASETNAME EXPORTPATH
+			delete REPOSITORY DATASETNAME
+			replace [-d description] [-m] REPOSITORY DATASETNAME DATASET
+			list [-p] REPOSITORY 
+			server REPOSITORY PROPERTYFILE
+			help
+
+REPOSITORY:		repository path
+DATASET:		file/folder to add to repository
+DATASETNAME:		name of dataset in repository
+EXPORTPATH:		path to export dataset to
+PROPERTYFILE:	property file for server

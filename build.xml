@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_dist_zip" name="Create Runnable Jar for Project data-repository" basedir=".">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="./dist/data-repository.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="com.xbockr.dr.control.Main"/>
+                <attribute name="Class-Path" value="."/>
+            	<attribute name="Class-Path" value="./data-repository-detection.jar"/>
+            </manifest>
+            <fileset dir="./bin"/>
+            <fileset dir="./files"/>
+            <zipfileset excludes="META-INF/*.SF" src="./lib/java-getopt-1.0.14.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="./lib/commons-io-2.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="./lib/JSON-Java.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="./lib/sqlite-jdbc-3.7.2.jar"/>
+        </jar>
+    </target>
+	<target name="create_dist_zip" depends="create_run_jar">
+		<copy file="./src/com/xbockr/dr/server/ICompletenessDetection.java" todir="./dist"></copy>
+		<zip destfile="./dist/dist.zip">
+			<fileset dir="./dist" excludes="**/*t.zip"/>
+		</zip>
+	</target>
+</project>
